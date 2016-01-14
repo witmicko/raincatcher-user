@@ -1,0 +1,24 @@
+{
+  "name": "fh-wfm-user",
+  "version": "0.0.1",
+  "description": "A user module for WFM",
+  "main": "user.js",
+  "scripts": {
+    "build": "wfm-template-build -m 'wfm.user.directives'",
+    "watch": "wfm-template-build -w -m 'wfm.user.directives'"
+  },
+  "keywords": [
+    "wfm",
+    "user"
+  ],
+  "author": "Brian Leathem",
+  "license": "Copyright (c) 2015 FeedHenry Ltd, All Rights Reserved.",
+  "dependencies": {
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "fh-wfm-template-build": ">=0.0.3"
+  }
+}
