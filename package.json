@@ -20,6 +20,6 @@
     "q": "^1.4.1"
   },
   "devDependencies": {
-    "fh-wfm-template-build": ">=0.0.3"
+    "fh-wfm-template-build": "0.0.4"
   }
 }
