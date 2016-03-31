@@ -2,7 +2,7 @@
   "name": "fh-wfm-user",
   "version": "0.0.12",
   "description": "A user module for WFM",
-  "main": "user.js",
+  "main": "lib/angular/services.js",
   "scripts": {
     "build": "wfm-template-build -m 'wfm.user.directives'",
     "watch": "wfm-template-build -w -m 'wfm.user.directives'"
@@ -20,6 +20,6 @@
     "q": "^1.4.1"
   },
   "devDependencies": {
-    "fh-wfm-template-build": "0.0.4"
+    "fh-wfm-template-build": "0.0.5"
   }
 }
