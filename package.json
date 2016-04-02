@@ -14,12 +14,12 @@
   "author": "Brian Leathem",
   "license": "SEE LICENSE IN LICENSE.txt",
   "dependencies": {
-    "express": "^4.13.3",
-    "fh-mbaas-api": "^5.3.5",
-    "lodash": "^3.10.1",
-    "q": "^1.4.1"
+    "express": "4.13.4",
+    "fh-mbaas-api": "5.5.6",
+    "lodash": "4.7.0",
+    "q": "1.4.1"
   },
   "devDependencies": {
-    "fh-wfm-template-build": "0.0.5"
+    "fh-wfm-template-build": "0.0.7"
   }
 }
