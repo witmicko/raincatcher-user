@@ -6,7 +6,7 @@
 <md-content class="wfm-maincol-scroll wfm-maincol-scroll_with-menu">
   <div class="user-info-header" ng-style="ctrl.style">
     <h1 class="md-display-1">{{ctrl.worker.name}}</h1>
-  </div> 
+  </div>
   <md-list>
     <md-list-item class="md-2-line" >
       <md-icon md-font-set="material-icons">person</md-icon>
@@ -40,6 +40,15 @@
       <div class="md-list-item-text">
         <h3>{{ctrl.worker.position}}</h3>
         <p>Position</p>
+      </div>
+      <md-divider></md-divider>
+    </md-list-item>
+
+    <md-list-item class="md-2-line" >
+      <md-icon md-font-set="material-icons">group</md-icon>
+      <div class="md-list-item-text">
+        <h3>{{ctrl.group.name}}</h3>
+        <p>Group</p>
       </div>
       <md-divider></md-divider>
     </md-list-item>

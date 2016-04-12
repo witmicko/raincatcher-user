@@ -75,6 +75,13 @@
     </div>
   </md-input-container>
 
+  <md-input-container class="md-block">
+    <label for="assignee">Group</label>
+    <md-select ng-model="ctrl.model.group" name="group" id="group">
+       <md-option ng-repeat="group in ctrl.groups" value="{{group.id}}">{{group.name}}</md-option>
+     </md-select>
+  </md-input-container> 
+
   <md-button type="submit" class="md-raised md-primary">{{ctrl.model.id || ctrl.model.id === 0 ? 'Update' : 'Create'}} Worker</md-button>
 </form>
 </div>

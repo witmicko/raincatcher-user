@@ -84,6 +84,13 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '    </div>\n' +
     '  </md-input-container>\n' +
     '\n' +
+    '  <md-input-container class="md-block">\n' +
+    '    <label for="assignee">Group</label>\n' +
+    '    <md-select ng-model="ctrl.model.group" name="group" id="group">\n' +
+    '       <md-option ng-repeat="group in ctrl.groups" value="{{group.id}}">{{group.name}}</md-option>\n' +
+    '     </md-select>\n' +
+    '  </md-input-container> \n' +
+    '\n' +
     '  <md-button type="submit" class="md-raised md-primary">{{ctrl.model.id || ctrl.model.id === 0 ? \'Update\' : \'Create\'}} Worker</md-button>\n' +
     '</form>\n' +
     '</div>\n' +

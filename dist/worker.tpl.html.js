@@ -15,7 +15,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '<md-content class="wfm-maincol-scroll wfm-maincol-scroll_with-menu">\n' +
     '  <div class="user-info-header" ng-style="ctrl.style">\n' +
     '    <h1 class="md-display-1">{{ctrl.worker.name}}</h1>\n' +
-    '  </div> \n' +
+    '  </div>\n' +
     '  <md-list>\n' +
     '    <md-list-item class="md-2-line" >\n' +
     '      <md-icon md-font-set="material-icons">person</md-icon>\n' +
@@ -49,6 +49,15 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '      <div class="md-list-item-text">\n' +
     '        <h3>{{ctrl.worker.position}}</h3>\n' +
     '        <p>Position</p>\n' +
+    '      </div>\n' +
+    '      <md-divider></md-divider>\n' +
+    '    </md-list-item>\n' +
+    '\n' +
+    '    <md-list-item class="md-2-line" >\n' +
+    '      <md-icon md-font-set="material-icons">group</md-icon>\n' +
+    '      <div class="md-list-item-text">\n' +
+    '        <h3>{{ctrl.group.name}}</h3>\n' +
+    '        <p>Group</p>\n' +
     '      </div>\n' +
     '      <md-divider></md-divider>\n' +
     '    </md-list-item>\n' +
