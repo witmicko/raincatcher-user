@@ -40,30 +40,37 @@
   </md-input-container>
 
   <md-input-container class="md-block">
-    <label for="workername">Banner</label>
-    <input type="text" id="banner" name="banner" ng-model="ctrl.model.banner">
-    <div ng-messages="workerForm.banner.$error" ng-if="ctrl.submitted || workerForm.banner.$dirty"></div>
+    <label for="workername">Banner URL</label>
+    <input type="url" id="banner" name="banner" ng-model="ctrl.model.banner">
+    <div ng-messages="workerForm.banner.$error" ng-if="ctrl.submitted || workerForm.banner.$dirty">
+      <div ng-message="url">Invalid URL.</div>
+    </div>
+
   </md-input-container>
 
   <md-input-container class="md-block">
-    <label for="workername">Avatar</label>
-    <input type="text" id="avatar" name="avatar" ng-model="ctrl.model.avatar">
-    <div ng-messages="workerForm.avatar.$error" ng-if="ctrl.submitted || workerForm.avatar.$dirty"></div>
+    <label for="workername">Avatar URL</label>
+    <input type="url" id="avatar" name="avatar" ng-model="ctrl.model.avatar">
+    <div ng-messages="workerForm.avatar.$error" ng-if="ctrl.submitted || workerForm.avatar.$dirty">
+       <div ng-message="url">Invalid URL.</div>
+    </div>
   </md-input-container>
 
   <md-input-container class="md-block">
     <label for="workername">Phone number</label>
-    <input type="text" id="phonenumber" name="phonenumber" ng-model="ctrl.model.phone" required>
+    <input type="number" id="phonenumber" name="phonenumber" ng-model="ctrl.model.phone" pattern="([0-9]{7,15})" required>
     <div ng-messages="workerForm.phonenumber.$error" ng-if="ctrl.submitted || workerForm.phonenumber.$dirty">
       <div ng-message="required">A phone number is required.</div>
+      <div ng-message="pattern">A phone number can't be less than 7 or more than 15 digits.</div>
     </div>
   </md-input-container>
 
   <md-input-container class="md-block">
     <label for="workername">Email</label>
-    <input type="text" id="email" name="email" ng-model="ctrl.model.email" required>
+    <input type="email" id="email" name="email" ng-model="ctrl.model.email" required>
     <div ng-messages="workerForm.email.$error" ng-if="ctrl.submitted || workerForm.email.$dirty">
       <div ng-message="required">An email is required.</div>
+      <div ng-message="email">Invalid email.</div>
     </div>
   </md-input-container>
 
@@ -77,10 +84,13 @@
 
   <md-input-container class="md-block">
     <label for="assignee">Group</label>
-    <md-select ng-model="ctrl.model.group" name="group" id="group">
+    <md-select ng-model="ctrl.model.group" name="group" id="group" required>
        <md-option ng-repeat="group in ctrl.groups" value="{{group.id}}">{{group.name}}</md-option>
      </md-select>
-  </md-input-container> 
+     <div ng-messages="workerForm.group.$error" ng-if="ctrl.submitted || workerForm.group.$dirty">
+       <div ng-message="required">An group is required.</div>
+     </div>
+  </md-input-container>
 
   <md-button type="submit" class="md-raised md-primary">{{ctrl.model.id || ctrl.model.id === 0 ? 'Update' : 'Create'}} Worker</md-button>
 </form>
