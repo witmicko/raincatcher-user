@@ -7,11 +7,6 @@ try {
 
 ngModule.run(['$templateCache', function ($templateCache) {
   $templateCache.put('wfm-template/worker.tpl.html',
-    '<!--\n' +
-    ' CONFIDENTIAL\n' +
-    ' Copyright 2016 Red Hat, Inc. and/or its affiliates.\n' +
-    ' This is unpublished proprietary source code of Red Hat.\n' +
-    '-->\n' +
     '<md-content class="wfm-maincol-scroll wfm-maincol-scroll_with-menu">\n' +
     '  <div class="user-info-header" ng-style="ctrl.style">\n' +
     '    <h1 class="md-display-1">{{ctrl.worker.name}}</h1>\n' +
