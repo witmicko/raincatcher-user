@@ -12,6 +12,16 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '    <h1 class="md-display-1">{{ctrl.worker.name}}</h1>\n' +
     '  </div>\n' +
     '  <md-list>\n' +
+    '\n' +
+    '    <md-list-item class="md-2-line" >\n' +
+    '      <md-icon md-font-set="material-icons">portrait</md-icon>\n' +
+    '      <div class="md-list-item-text">\n' +
+    '        <h3>{{ctrl.worker.id}}</h3>\n' +
+    '        <p>Worker id</p>\n' +
+    '      </div>\n' +
+    '      <md-divider></md-divider>\n' +
+    '    </md-list-item>\n' +
+    '\n' +
     '    <md-list-item class="md-2-line" >\n' +
     '      <md-icon md-font-set="material-icons">person</md-icon>\n' +
     '      <div class="md-list-item-text">\n' +
