@@ -1,4 +1,4 @@
-# FeedHenry WFM user
+# FeedHenry WFM user [![Build Status](https://travis-ci.org/feedhenry-raincatcher/raincatcher-user.png)](https://travis-ci.org/feedhenry-raincatcher/raincatcher-user)
 
 A module for FeedHenry WFM that manages users, groups and memberships. It provides :
 - Backend services to handle CRUD operations for user, group and membership.
@@ -94,7 +94,7 @@ require('fh-wfm-user/lib/router/mbaas')(mediator, app);
 ```
 
 For a more complete example check [here](https://github.com/feedhenry-staff/wfm-auth)
- 
+
 ### Environment variables
 The `WFM_AUTH_POLICY_ID` env var can be set in the WFM cloud APP to override the default `wfm` auth policy ID.
 
