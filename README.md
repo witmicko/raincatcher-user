@@ -1,6 +1,6 @@
-# FeedHenry WFM user [![Build Status](https://travis-ci.org/feedhenry-raincatcher/raincatcher-user.png)](https://travis-ci.org/feedhenry-raincatcher/raincatcher-user)
+# FeedHenry RainCatcher user [![Build Status](https://travis-ci.org/feedhenry-raincatcher/raincatcher-user.png)](https://travis-ci.org/feedhenry-raincatcher/raincatcher-user)
 
-A module for FeedHenry WFM that manages users, groups and memberships. It provides :
+A module for FeedHenry RainCatcher that manages users, groups and memberships. It provides :
 - Backend services to handle CRUD operations for user, group and membership.
 - Frontend directives and services providing CRUD clients for user, group and membership.
 
@@ -38,9 +38,9 @@ resolve: {
           return userClient.read($stateParams.workerId);
         }
 ```
-For a more complete example around CRUD operations, please check the [demo portal app](https://github.com/feedhenry-staff/wfm-portal/blob/master/src/app/worker/worker.js).
+For a more complete example around CRUD operations, please check the [demo portal app](https://github.com/feedhenry-raincatcher/raincatcher-demo-portal/blob/master/src/app/worker/worker.js).
 
-For a more complete example around user authentication operations, please check the [this](https://github.com/feedhenry-staff/wfm-portal/blob/master/src/app/auth/auth.js).
+For a more complete example around user authentication operations, please check the [this](https://github.com/feedhenry-raincatcher/raincatcher-demo-portal/blob/master/src/app/auth/auth.js).
 
 ##### Directives
 
@@ -56,7 +56,7 @@ For a more complete example around user authentication operations, please check 
 ## Usage in an express backend and mbaas service
 
 ### Setup express backend end
-The server-side component of this WFM module exports a function that takes express and mediator instances as parameters, as in:
+The server-side component of this RainCatcher module exports a function that takes express and mediator instances as parameters, as in:
 
 ```javascript
 var express = require('express')
@@ -93,7 +93,7 @@ var authServiceGuid = process.env.WFM_AUTH_GUID;
 require('fh-wfm-user/lib/router/mbaas')(mediator, app);
 ```
 
-For a more complete example check [here](https://github.com/feedhenry-staff/wfm-auth)
+For a more complete example check [here](https://github.com/feedhenry-raincatcher/raincatcher-demo-auth)
 
 ### Environment variables
 The `WFM_AUTH_POLICY_ID` env var can be set in the WFM cloud APP to override the default `wfm` auth policy ID.
