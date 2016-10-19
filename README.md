@@ -4,6 +4,13 @@ A module for FeedHenry RainCatcher that manages users, groups and memberships. I
 - Backend services to handle CRUD operations for user, group and membership.
 - Frontend directives and services providing CRUD clients for user, group and membership.
 
+## Requirements
+
+This modules is dependent to the Red Hat Mobile Application Platform (RHMAP).
+
+This module requires the Red Hat Mobile Application Platform (RHMAP) Authentication Policies functionality to work correctly. See this [guide](http://docs.feedhenry.com/v3/product_features/admin.html#admin-auth_policies).
+
+This module uses the *MBAAS* authentication Authentication Policy Provider. This means that a [MBaaS Service](http://docs.feedhenry.com/v3/product_features/services.html) provides the business logic to create and authenticate users for this module.
 
 ## Client-side usage
 
@@ -100,7 +107,7 @@ The `WFM_AUTH_POLICY_ID` env var can be set in the WFM cloud APP to override the
 
 ### Exposed CRUD endpoints
 
-Base url : `/api/wfm/[group|user|membership|`
+Base url : `/api/wfm/[group|user|membership]`
 
 | resource | method | returns |
 | -------- | ------ | ------- |
@@ -109,6 +116,14 @@ Base url : `/api/wfm/[group|user|membership|`
 | /:id | PUT | updated user/group/membership |
 | / | POST | created user/group/membership |
 | /:id | DELETE | deleted user/group/membership |
+
+### Exposed location endpoint
+
+This endpoint updates the location for user with ID `id`.
+
+| resource | method | returns |
+| -------- | ------ | ------- |
+| /:id/location | PUT | updated user |
 
 ### Exposed Auth endpoints
 
