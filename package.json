@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "4.14.0",
-    "fh-mbaas-api": "5.14.1",
+    "fh-mbaas-api": "5.14.2",
     "lodash": "4.7.0",
     "q": "1.4.1"
   },
