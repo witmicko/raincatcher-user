@@ -35,10 +35,9 @@
   </md-input-container>
 
   <md-input-container class="md-block">
-    <label for="workername">Password</label>
-    <input type="password" id="password" name="password" ng-model="ctrl.model.password" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" ng-model="ctrl.model.password">
     <div ng-messages="workerForm.password.$error" ng-if="ctrl.submitted || workerForm.password.$dirty">
-      <div ng-message="required">A password is required.</div>
     </div>
   </md-input-container>
 

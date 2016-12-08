@@ -44,10 +44,9 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '  </md-input-container>\n' +
     '\n' +
     '  <md-input-container class="md-block">\n' +
-    '    <label for="workername">Password</label>\n' +
-    '    <input type="password" id="password" name="password" ng-model="ctrl.model.password" required>\n' +
+    '    <label for="password">Password</label>\n' +
+    '    <input type="password" id="password" name="password" ng-model="ctrl.model.password">\n' +
     '    <div ng-messages="workerForm.password.$error" ng-if="ctrl.submitted || workerForm.password.$dirty">\n' +
-    '      <div ng-message="required">A password is required.</div>\n' +
     '    </div>\n' +
     '  </md-input-container>\n' +
     '\n' +
