@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-user",
-  "version": "0.1.0",
+  "version": "0.0.26",
   "description": "A user module for WFM",
   "main": "lib/angular/user-ng.js",
   "scripts": {
@@ -38,6 +38,7 @@
     "grunt-shell": "1.2.1",
     "load-grunt-tasks": "^3.5.2",
     "mocha": "2.4.5",
+    "proxyquire": "^1.7.10",
     "sinon": "^1.17.6",
     "sinon-as-promised": "^4.0.2",
     "supertest": "^2.0.1"
