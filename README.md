@@ -4,6 +4,16 @@ A module for FeedHenry RainCatcher that manages users, groups and memberships. I
 - Backend services to handle CRUD operations for user, group and membership.
 - Frontend directives and services providing CRUD clients for user, group and membership.
 
+## Upgrading to 0.1.0 from 0.0.x
+Version 0.1.0 introduces secure authentication along with password hashing. Password update for users is available as part of the updated [raincatcher-demo-portal](https://github.com/feedhenry-raincatcher/raincatcher-demo-portal) (available in Workers > Worker details > Edit)
+
+### How to upgrade
+Update your mobile application, portal application, cloud application and auth service to utilize version 0.1.x of `fh-wfm-user`.
+Update your auth service to reflect changes in [raincatcher-demo-auth](https://github.com/feedhenry-raincatcher/raincatcher-demo-auth/pull/23)
+
+You will also need to hash your users' passwords using the new hashing algorithm, utilizing one of the following options:
+- Manually editing the users' passwords through the updated portal app
+- If you already have user passwords stored in a custom persistent storage implementation, run a single-pass migration to store them as hashed strings instead. See [this example](./examples/hashing-migration.js).
 
 ## Client-side usage
 
@@ -114,11 +124,11 @@ Base url : `/api/wfm/[group|user|membership|`
 
 Base url : `/api/wfm/user`
 
-| resource | method | returns |
-| -------- | ------ | ------- |
-| /auth | all | `{satus: 'ok', userId: username, sessionToken: sessiontoken, authResponse: profileData}` |
-| /verifysession | all | `{isValid: true}` |
-| /revokesession | all | `{}` |
+| resource | parameters | method | returns |
+| -------- | ------ | ------- | ---- |
+| /auth | all | username, password | `{satus: 'ok', userId: userId, sessionToken: sessiontoken, authResponse: profileData}` |
+| /verifysession | all | | `{isValid: true}` |
+| /revokesession | all | |  `{}` |
 
 
 

@@ -1,6 +1,11 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
   },
   "extends": "eslint:recommended",
   "rules": {
@@ -23,7 +28,8 @@
     "space-before-blocks": "error",
     "space-before-function-paren": ["error", "never"],
     "keyword-spacing": ["error"],
-    "curly": ["error", "all"]
+    "curly": ["error", "all"],
+    "no-else-return": ["error"]
   },
   "globals": {
     "angular": false,
@@ -31,4 +37,3 @@
     "localStorage": false
   }
 }
-
