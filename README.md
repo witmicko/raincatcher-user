@@ -5,25 +5,15 @@ A module for FeedHenry RainCatcher that manages users, groups and memberships. I
 - Frontend directives and services providing CRUD clients for user, group and membership.
 
 ## Upgrading to 0.1.0 from 0.0.x
-Version 0.1.0 introduces secure authentication along with password hashing, password update (available in portal > edit user)
-
-[Raincatcher-demo-portal](https://github.com/feedhenry-raincatcher/raincatcher-demo-portal) has been updated with reset all passwords functionality
-
-User module has now all the functionality to handle user actions
-[Raincatcher-demo-auth changes](https://github.com/feedhenry-raincatcher/raincatcher-demo-auth/pull/23/files#diff-541b95c95bad6099c84077e8f995e22fL16)
-[Raincatcher-user changes](https://github.com/feedhenry-raincatcher/raincatcher-user/pull/19/files#diff-2c7d8efd78848f1f8e6d2eb8bc78d4c5R133)
+Version 0.1.0 introduces secure authentication along with password hashing. Password update for users is available as part of the updated [raincatcher-demo-portal](https://github.com/feedhenry-raincatcher/raincatcher-demo-portal) (available in Workers > Worker details > Edit)
 
 ### How to upgrade
-Update your mobile, portal, cloud and auth service with 0.1.x version of fh-wfm-user
-
-
-You will also need to hash your user's passwords using new scheme, and there is three ways to do it:
-- reset all users to the same password - portal app > settings > reset passwords
-- cli/file provided passwords - you can see the example here [user_hash_example](https://github.com/witmicko/user_hash_example), 
-- individually per user - portal > workers > edit
-
-
+Update your mobile application, portal application, cloud application and auth service to utilize version 0.1.x of `fh-wfm-user`.
 Update your auth service to reflect changes in [raincatcher-demo-auth](https://github.com/feedhenry-raincatcher/raincatcher-demo-auth/pull/23)
+
+You will also need to hash your users' passwords using the new hashing algorithm, utilizing one of the following options:
+- Manually editing the users' passwords through the updated portal app
+- If you already have user passwords stored in a custom persistent storage implementation, run a single-pass migration to store them as hashed strings instead. See [this example](./examples/hashing-migration.js).
 
 ## Client-side usage
 
