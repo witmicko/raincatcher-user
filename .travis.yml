@@ -4,6 +4,7 @@ node_js:
   - '4.4'
 services:
   - docker
+  - redis-server
 sudo: false
 script:
   - npm test
