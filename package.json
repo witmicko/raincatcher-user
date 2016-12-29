@@ -10,6 +10,7 @@
   "scripts": {
     "build": "wfm-template-build -m 'wfm.user.directives'",
     "watch": "wfm-template-build -w -m 'wfm.user.directives'",
+    "vuln": "nsp check",
     "test": "cross-env WFM_USE_MEMORY_STORE=true grunt"
   },
   "keywords": [
@@ -44,8 +45,9 @@
     "grunt-mocha-test": "^0.13.2",
     "grunt-shell": "1.2.1",
     "load-grunt-tasks": "^3.5.2",
-    "proxyquire": "^1.7.10",
     "mocha": "^3.2.0",
+    "nsp": "^2.6.2",
+    "proxyquire": "^1.7.10",
     "sinon": "^1.17.6",
     "sinon-as-promised": "^4.0.2",
     "supertest": "^2.0.1"
