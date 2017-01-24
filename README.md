@@ -4,7 +4,8 @@ A module for FeedHenry RainCatcher that manages users, groups and memberships. I
 - Backend services to handle CRUD operations for user, group and membership.
 - Frontend directives and services providing CRUD clients for user, group and membership.
 
-## Upgrading to 0.2.0 from 0.1.x
+
+## Upgrading to 0.2.1 from 0.1.x
 Version 0.2.0 introduces session storage for authenticated users utilizing either MongoDB or Redis as storage engines.
 
 This involves an extra parameter to the initialization of the router for the authentication service which contains the configuration for the session storage.
@@ -47,6 +48,13 @@ userRouter.init(
     // router initialized
   })
 ```
+
+Version 0.2.1 introduced encryption of the users profile data in localstorage (fh.wfm.profileData) on the mobile client. The user will likely need to clear the app data/cache in their phones system settings for this feature to work, as previous plaintext profile data may be left on the phone causing an error on decryption. To clear the app data on Android: 
+
+* Step 1: Head to the Settings menu. This can be done by tapping the cog icon in your notification shade.
+* Step 2: Find Apps (or Applications, depending on your device) in the menu, then locate the app that you want to clear the cache or data for.
+* Step 3: Tap on Storage and the buttons for clearing the cache and app data will become available .
+
 
 ## Upgrading to 0.1.0 from 0.0.x
 Version 0.1.0 introduces secure authentication along with password hashing. Password update for users is available as part of the updated [raincatcher-demo-portal](https://github.com/feedhenry-raincatcher/raincatcher-demo-portal) (available in Workers > Worker details > Edit)
