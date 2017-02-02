@@ -4,7 +4,6 @@ A module for FeedHenry RainCatcher that manages users, groups and memberships. I
 - Backend services to handle CRUD operations for user, group and membership.
 - Frontend directives and services providing CRUD clients for user, group and membership.
 
-
 ## Upgrading to 0.2.0 from 0.1.x
 Version 0.2.0 introduces session storage for authenticated users utilizing either MongoDB or Redis as storage engines.
 
