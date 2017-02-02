@@ -45,7 +45,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '\n' +
     '  <md-input-container class="md-block">\n' +
     '    <label for="password">Password</label>\n' +
-    '    <input type="password" id="password" name="password" ng-model="ctrl.model.password">\n' +
+    '    <input type="password" id="password" name="password" ng-model="ctrl.model.password" autocomplete="off">\n' +
     '    <div ng-messages="workerForm.password.$error" ng-if="ctrl.submitted || workerForm.password.$dirty">\n' +
     '    </div>\n' +
     '  </md-input-container>\n' +
