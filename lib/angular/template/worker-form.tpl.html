@@ -36,7 +36,7 @@
 
   <md-input-container class="md-block">
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" ng-model="ctrl.model.password">
+    <input type="password" id="password" name="password" ng-model="ctrl.model.password" autocomplete="off">
     <div ng-messages="workerForm.password.$error" ng-if="ctrl.submitted || workerForm.password.$dirty">
     </div>
   </md-input-container>
