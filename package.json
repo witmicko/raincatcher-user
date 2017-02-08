@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-user",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A user module for WFM",
   "main": "lib/angular/user-ng.js",
   "repository": {
