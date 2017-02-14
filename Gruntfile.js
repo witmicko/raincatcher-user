@@ -19,14 +19,18 @@ module.exports = function(grunt) {
           run: true
         }
       }
+    },
+    env:{
+      test :{
+        WFM_USE_MEMORY_STORE: true
+      }
     }
   });
-
+  grunt.loadNpmTasks('grunt-env');
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks("grunt-eslint");
   grunt.registerTask('mocha', ['mochaTest']);
-  grunt.registerTask('unit', ['eslint', 'mocha']);
-
+  grunt.registerTask('unit', ['env:test', 'eslint', 'mocha']);
   grunt.registerTask('default', ['unit']);
 
 };
