@@ -3,6 +3,10 @@
   "version": "0.3.1",
   "description": "A user module for WFM",
   "main": "lib/angular/user-ng.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feedhenry-raincatcher/raincatcher-user.git"
+  },
   "scripts": {
     "build": "wfm-template-build -m 'wfm.user.directives'",
     "watch": "wfm-template-build -w -m 'wfm.user.directives'",
@@ -18,6 +22,7 @@
   "dependencies": {
     "connect-mongo": "^1.3.2",
     "connect-redis": "^3.1.0",
+    "crypto-js": "3.1.8",
     "express": "4.14.0",
     "express-session": "^1.14.2",
     "fh-mbaas-api": "5.14.2",
