@@ -15,6 +15,13 @@ In the MBaaS service that authenticates users (e.g. [raincatcher-demo-auth](http
 
 See the [Setup router for Cloud App](#setup-router-for-cloud-app) section for more details.
 
+Version 0.2.1 introduced encryption of the users profile data in localstorage (fh.wfm.profileData). The user will likely need to clear the app data/cache in their phones system settings for this feature to work, as previous plaintext profile data may be left on the phone causing an error when trying to decrypt it. To clear the app data on Android: 
+
+* Step 1: Head to the Settings menu. This can be done by tapping the cog icon in your notification shade.
+* Step 2: Find Apps (or Applications, depending on your device) in the menu, then locate the app that you want to clear the cache or data for.
+* Step 3: Tap on Storage and the buttons for clearing the cache and app data will become available.
+
+
 ## Upgrading to 0.1.0 from 0.0.x
 Version 0.1.0 introduces secure authentication along with password hashing. Password update for users is available as part of the updated [raincatcher-demo-portal](https://github.com/feedhenry-raincatcher/raincatcher-demo-portal) (available in Workers > Worker details > Edit)
 
