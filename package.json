@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-user",
-  "version": "0.3.1-alpha.8",
+  "version": "0.3.1-alpha.9",
   "description": "A user module for WFM",
   "main": "lib/angular/user-ng.js",
   "repository": {
@@ -25,9 +25,9 @@
     "crypto-js": "3.1.8",
     "express": "4.14.0",
     "express-session": "^1.14.2",
-    "fh-mbaas-api": "5.14.2",
-    "fh-wfm-mediator": "0.3.1-alpha.1",
-    "fh-wfm-simple-store": "0.1.0",
+    "fh-mbaas-api": "6.1.5",
+    "fh-wfm-mediator": "0.3.1-alpha.2",
+    "fh-wfm-simple-store": "0.1.1-alpha.4",
     "lodash": "4.7.0",
     "mongodb": "^2.2.16",
     "q": "1.4.1",
