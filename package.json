@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-user",
-  "version": "0.3.1-alpha.9",
+  "version": "0.3.1-alpha.10",
   "description": "A user module for WFM",
   "main": "lib/angular/user-ng.js",
   "repository": {
@@ -11,7 +11,7 @@
     "build": "wfm-template-build -m 'wfm.user.directives'",
     "watch": "wfm-template-build -w -m 'wfm.user.directives'",
     "vuln": "nsp check",
-    "test": "cross-env WFM_USE_MEMORY_STORE=true grunt"
+    "test": "WFM_USE_MEMORY_STORE=true grunt"
   },
   "keywords": [
     "wfm",
